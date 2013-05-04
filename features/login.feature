@@ -34,3 +34,16 @@ Feature: Log in
   Scenario: Log in with valid credentials
     When Log in as Selenium_user
     Then there should be text Selenium user
+ 
+ Scenario: Login should work fine with username with maximum charaters allowed
+ When Enter a username with maximum characters allowed and enter password
+ Then user should be able to login fine
+ And no error message is displayed
+
+ Scenario: Login should work fine with username having password with maximum charaters allowed
+ When Enter a username for which password is maximum characters allowed and enter password
+ Then user should be able to login fine
+ And no error message is displayed
+
+
+ 
